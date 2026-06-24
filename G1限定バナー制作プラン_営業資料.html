@@ -4,26 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>G1限定バナー制作プラン｜営業担当者向けご案内</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239B4266'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='%23fff'%3EG1%3C/text%3E%3Ccircle cx='48' cy='16' r='6' fill='%23E0B04F'/%3E%3C/svg%3E">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
   :root {
-    --pink:#C0166E; --pink-dark:#9a1058; --pink-bright:#E91E8C;
-    --pink-pale:#FCE4F3; --pink-light:#fdf0f7;
-    --gold:#c8880c; --gold-bg:#fff9e6;
+    --pink:#9B4266; --pink-dark:#74324d; --pink-bright:#B95D80;
+    --pink-pale:#F8EAF0; --pink-light:#FCF5F8;
+    --gold:#A97817; --gold-bg:#FFF8E8;
     --green:#1a7a4a; --green-bg:#e8f7ef;
     --surface:#fff; --text:#1a1a1a; --muted:#666; --border:#e8d0e0; --row:#fdf6fa;
     --page-w:900px; --nav-h:54px;
-    --t-xl:20px; --t-lg:15px; --t-price:28px; --t-plan:15px;
-    --t-sec:11px; --t-body:12px; --t-sub:10px; --t-xs:9.5px;
+    --t-xl:24px; --t-lg:17px; --t-price:31px; --t-plan:17px;
+    --t-sec:12.5px; --t-body:14px; --t-sub:12.5px; --t-xs:11px;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Noto Sans JP',sans-serif;background:#ede0e8;color:var(--text);font-size:var(--t-body);line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding-top:var(--nav-h)}
+  body{font-family:'Noto Sans JP',sans-serif;background:#f5eef2;color:var(--text);font-size:var(--t-body);line-height:1.78;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding-top:var(--nav-h)}
 
   /* ── TOP NAV (fixed) ── */
   .topnav{
     position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:1000;
-    background:#fff; border-bottom:1px solid var(--border);
+    background:#fff; border-bottom:1px solid #ead7e0;
     box-shadow:0 2px 10px rgba(0,0,0,.08);
     display:flex; align-items:center;
     padding:0;
@@ -32,7 +33,7 @@
     display:flex; align-items:center; gap:8px; flex-shrink:0;
     font-weight:900; font-size:13px; color:var(--pink); letter-spacing:.02em;
     padding:0 20px;
-    border-right:1px solid var(--border);
+    border-right:1px solid #ead7e0;
     margin-right:4px;
     white-space:nowrap;
   }
@@ -42,7 +43,7 @@
     display:inline-flex; align-items:center; gap:4px;
     font-size:11px; font-weight:700; color:var(--pink-dark);
     text-decoration:none; padding:7px 12px; border-radius:20px;
-    background:var(--pink-light); border:1px solid transparent;
+    background:#fbf2f6; border:1px solid #edd6e0;
     transition:background .15s, color .15s, border-color .15s;
     white-space:nowrap;
   }
@@ -50,24 +51,26 @@
   .nav-links a:hover{ background:var(--pink-bright); color:#fff; border-color:var(--pink-bright); }
   .nav-links a:hover .n{ color:#fff; }
 
-  .page{width:var(--page-w);margin:24px auto;background:var(--surface);border-radius:4px;box-shadow:0 4px 24px rgba(0,0,0,.10);overflow:hidden;display:flex;flex-direction:column;page-break-after:always;scroll-margin-top:calc(var(--nav-h) + 16px)}
-  .page-body{padding:26px 40px 30px;flex:1}
-  .ph{background:var(--pink);padding:22px 40px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-shrink:0}
+  .page{width:min(var(--page-w), calc(100% - 32px));margin:24px auto;background:var(--surface);border-radius:4px;box-shadow:0 4px 24px rgba(0,0,0,.10);overflow:hidden;display:flex;flex-direction:column;page-break-after:always;scroll-margin-top:calc(var(--nav-h) + 16px)}
+  .page-body{padding:30px 44px 34px;flex:1}
+  .page-guide{display:flex;align-items:center;gap:12px;background:#fbf4f7;border:1px solid #ead1dc;border-left:6px solid var(--pink);border-radius:6px;padding:10px 14px;margin:0 0 18px;color:var(--pink-dark);line-height:1.55}
+  .page-guide-label{flex:0 0 auto;background:var(--pink);color:#fff;font-size:var(--t-xs);font-weight:900;letter-spacing:.08em;padding:4px 8px;border-radius:3px}
+  .page-guide-text{font-size:13px;font-weight:800}
+  .ph{background:#8f3d5f;padding:26px 40px 22px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-shrink:0}
   .hl{flex:1}
-  .badge{background:#fff;color:var(--pink);font-size:var(--t-xs);font-weight:700;letter-spacing:.06em;padding:2px 10px;border-radius:2px;display:inline-block;margin-bottom:7px}
-  .ph h1{font-family:'Noto Serif JP',serif;font-size:var(--t-xl);color:#fff;line-height:1.35}
-  .ph .sub{font-size:var(--t-xs);color:rgba(255,255,255,.72);margin-top:5px}
+  .badge{background:#fff;color:var(--pink);font-size:12px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:2px;display:inline-block;margin-bottom:8px}
+  .ph h1{font-family:'Noto Sans JP',sans-serif;font-size:27px;font-weight:900;color:#fff;line-height:1.45;letter-spacing:.02em}
+  .ph .sub{font-size:13.5px;color:rgba(255,255,255,.86);margin-top:5px}
   .hr{text-align:right;flex-shrink:0}
   .hr .brand{font-size:22px;font-weight:900;color:#fff;letter-spacing:.12em}
   .hr .pnum{font-size:var(--t-xs);color:rgba(255,255,255,.5);margin-top:3px}
-  .hr .ach{margin-top:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:3px;padding:3px 9px;font-size:var(--t-xs);color:rgba(255,255,255,.88);white-space:nowrap}
   .sec{font-size:var(--t-sec);font-weight:700;letter-spacing:.1em;color:var(--pink);border-left:3px solid var(--pink-bright);padding-left:10px;margin-bottom:12px}
   .pain-g{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px}
-  .pain-c{background:var(--pink-light);border:1px solid #f0b8d8;border-radius:6px;padding:10px 13px;display:flex;align-items:flex-start;gap:9px}
+  .pain-c{background:#fff; border:1px solid #ead7e0;border-radius:6px;padding:12px 14px;display:flex;align-items:flex-start;gap:9px}
   .p-ico{width:22px;height:22px;border-radius:50%;background:var(--pink-bright);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
   .p-txt{font-size:var(--t-body);color:#7a1050;line-height:1.55}
   .arrow{text-align:center;margin:0 0 14px;font-size:var(--t-body);font-weight:700;color:var(--pink-bright)}
-  .sol{background:linear-gradient(135deg,var(--pink-dark) 0%,var(--pink-bright) 100%);border-radius:8px;padding:16px 22px;display:flex;align-items:center;gap:20px;margin-bottom:20px}
+  .sol{background:#7f3856;border-radius:8px;padding:18px 24px;display:flex;align-items:center;gap:20px;margin-bottom:20px}
   .sol-in{flex:1}
   .sol-ey{font-size:var(--t-xs);font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.1em;margin-bottom:4px}
   .sol-h{font-size:var(--t-lg);font-weight:700;color:#fff;line-height:1.45}
@@ -76,22 +79,18 @@
   .sol-p .from{font-size:var(--t-sub);color:rgba(255,255,255,.6)}
   .sol-p .num{font-size:var(--t-price);font-weight:900;color:#ffe082;line-height:1.1}
   .sol-p .per{font-size:var(--t-sub);color:rgba(255,255,255,.6)}
-  .direction-hero{background:linear-gradient(135deg,var(--pink-dark) 0%,var(--pink-bright) 72%,#f5b640 100%);border-radius:8px;padding:20px 24px;margin-bottom:18px;box-shadow:0 6px 18px rgba(192,22,110,.22)}
+  .direction-hero{background:#7f3856;border-radius:8px;padding:22px 26px;margin-bottom:20px;box-shadow:0 5px 16px rgba(116,50,77,.18)}
   .direction-label{font-size:var(--t-xs);font-weight:900;color:#ffe082;letter-spacing:.12em;margin-bottom:6px}
   .direction-title{font-size:22px;font-weight:900;color:#fff;line-height:1.35;margin-bottom:7px}
   .direction-title strong{color:#ffe082;background:rgba(255,255,255,.13);padding:0 5px;border-radius:3px}
   .direction-copy{font-size:var(--t-body);color:rgba(255,255,255,.92);line-height:1.75;max-width:690px}
   .hero-catch{display:inline-block;background:#fff;color:var(--pink-dark);font-size:14px;font-weight:900;line-height:1.4;padding:7px 12px;border-radius:4px;margin-top:10px}
   .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:16px}
-  .impact-card{background:#fffdf7;border:1px solid #f0c46a;border-radius:6px;padding:11px 13px;text-align:center}
+  .impact-card{background:#fff;border:1px solid #e7d7bd;border-radius:6px;padding:13px 14px;text-align:center}
   .impact-label{font-size:var(--t-xs);font-weight:900;color:var(--gold);letter-spacing:.1em;margin-bottom:4px}
   .impact-title{font-size:14px;font-weight:900;color:var(--pink-dark);line-height:1.35;margin-bottom:4px}
   .impact-text{font-size:var(--t-sub);color:var(--muted);line-height:1.65}
-  .sales-cta-strip{background:#fff;border:2px solid #ffe082;border-left:6px solid var(--gold);border-radius:7px;padding:12px 16px;margin:0 0 16px;display:flex;align-items:center;gap:14px}
-  .sales-cta-label{background:var(--gold);color:#fff;font-size:var(--t-xs);font-weight:900;letter-spacing:.1em;padding:5px 9px;border-radius:3px;white-space:nowrap}
-  .sales-cta-main{font-size:13px;font-weight:900;color:var(--pink-dark);line-height:1.45}
-  .sales-cta-sub{font-size:var(--t-sub);color:var(--muted);margin-top:2px;line-height:1.55}
-  .solution-banner{background:linear-gradient(135deg,var(--pink-dark) 0%,var(--pink-bright) 100%);border-radius:8px;padding:16px 22px;display:flex;align-items:center;gap:20px;margin-bottom:18px}
+  .solution-banner{background:#7f3856;border-radius:8px;padding:18px 24px;display:flex;align-items:center;gap:20px;margin-bottom:20px}
   .solution-label{font-size:var(--t-xs);font-weight:700;color:rgba(255,255,255,.65);letter-spacing:.1em;margin-bottom:4px}
   .solution-text{font-size:15px;font-weight:700;color:#fff;line-height:1.5}
   .solution-sub{font-size:var(--t-sub);color:rgba(255,255,255,.75);margin-top:4px}
@@ -100,7 +99,7 @@
   .solution-price .price-val{font-size:30px;font-weight:900;color:#ffe082;line-height:1.1}
   .solution-price .per{font-size:var(--t-sub);color:rgba(255,255,255,.65)}
   .quick-targets{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
-  .quick-target{background:var(--pink-light);border:1px solid var(--border);border-left:4px solid var(--pink-bright);border-radius:5px;padding:9px 11px;font-size:var(--t-sub);font-weight:700;color:var(--pink-dark);line-height:1.5}
+  .quick-target{background:#fff;border:1px solid #ead7e0;border-left:4px solid var(--pink-bright);border-radius:5px;padding:11px 12px;font-size:var(--t-sub);font-weight:700;color:var(--pink-dark);line-height:1.65}
   .tgt-g{display:grid;grid-template-columns:1fr 1fr;gap:9px}
   .tgt-c{background:var(--green-bg);border:1px solid #a8dfc0;border-radius:6px;padding:10px 13px;display:flex;align-items:flex-start;gap:9px}
   .chk{color:var(--green);font-size:var(--t-body);font-weight:700;flex-shrink:0;margin-top:1px}
@@ -114,14 +113,10 @@
   .tp{display:inline-block;background:var(--pink);color:#fff;font-size:var(--t-xs);font-weight:700;padding:2px 6px;border-radius:3px;margin-right:5px;white-space:nowrap}
   .tb{display:inline-block;background:var(--pink-bright);color:#fff;font-size:var(--t-xs);font-weight:700;padding:2px 6px;border-radius:3px;margin-right:5px;white-space:nowrap}
   .merit-g{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:16px}
-  .merit-c{background:#fff;border:1px solid #f0b0d8;border-top:4px solid var(--pink-bright);border-radius:6px;padding:11px 12px}
+  .merit-c{background:#fff;border:1px solid #ead7e0;border-top:4px solid var(--pink-bright);border-radius:6px;padding:13px 14px}
   .merit-n{font-size:var(--t-xs);font-weight:900;color:var(--pink-bright);letter-spacing:.08em;margin-bottom:4px}
   .merit-h{font-size:var(--t-body);font-weight:900;color:var(--pink-dark);line-height:1.45;margin-bottom:4px}
   .merit-t{font-size:var(--t-sub);color:var(--muted);line-height:1.65}
-  .value-g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
-  .value-c{background:var(--row);border:1px solid var(--border);border-left:4px solid var(--pink-bright);border-radius:5px;padding:9px 10px}
-  .value-h{font-size:var(--t-xs);font-weight:900;color:var(--pink);letter-spacing:.05em;margin-bottom:3px}
-  .value-t{font-size:var(--t-sub);color:var(--muted);line-height:1.55}
   .sc-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
   .sc-c{border:1px solid var(--border);border-radius:6px;overflow:hidden}
   .sc-h{background:var(--pink);color:#fff;font-size:var(--t-xs);font-weight:700;padding:7px 12px}
@@ -178,10 +173,184 @@
   .pf{background:var(--pink-dark);padding:9px 40px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
   .fb{color:rgba(255,255,255,.6);font-size:var(--t-xs);font-weight:700;letter-spacing:.1em}
   .fs2{color:rgba(255,255,255,.4);font-size:var(--t-xs)}
+  /* readability boost */
+  .direction-title{font-size:25px}
+  .direction-copy,
+  .impact-text,
+  .solution-sub,
+  .quick-target,
+  .merit-t,
+  .sc-b,
+  .ba-l li,
+  .ba-con,
+  .notes,
+  .b-val,
+  .fnote,
+  .fd,
+  .notice,
+  .faq-a,
+  .tgt-t{font-size:13px;line-height:1.85}
+  .sec,
+  .direction-label,
+  .impact-label,
+  .solution-label,
+  .merit-n,
+  .fn{font-size:12px}
+  .impact-title,
+  .merit-h,
+  .ft2,
+  .faq-q{font-size:14px;line-height:1.65}
+  .pt,
+  .ft{font-size:13.5px}
+  .pt th,
+  .pt td,
+  .ft th,
+  .ft td{padding:12px 14px}
+
+  /* series layout alignment with 定額制資料 */
+  .topnav{
+    height:var(--nav-h);
+    background:rgba(116,50,77,.97);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    box-shadow:0 2px 16px rgba(0,0,0,.22);
+    border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .nav-title{
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.14em;
+    color:#fff;
+    padding:0 20px;
+    border-right:1px solid rgba(255,255,255,.22);
+    margin-right:4px;
+  }
+  .nav-title .dot{background:#f3c5d5}
+  .nav-links{gap:2px;padding:0 8px;overflow-x:visible}
+  .nav-links a{
+    display:flex;
+    gap:6px;
+    padding:6px 14px;
+    border-radius:4px;
+    background:transparent;
+    color:rgba(255,255,255,.84);
+    border:1px solid transparent;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.04em;
+  }
+  .nav-links a .n{
+    background:rgba(255,255,255,.20);
+    border-radius:3px;
+    font-size:9.5px;
+    font-weight:700;
+    padding:1px 5px;
+    color:rgba(255,255,255,.92);
+    letter-spacing:.02em;
+  }
+  .nav-links a:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.20)}
+  .nav-links a:hover .n{color:#fff}
+  .page{width:min(960px, 100%);margin:28px auto;border-radius:6px;box-shadow:0 4px 28px rgba(0,0,0,.12)}
+  .page-body{padding:36px 46px 40px}
+  .ph{padding:26px 40px 22px}
+  .direction-hero{padding:22px 24px;margin-bottom:18px}
+  .solution-banner{padding:18px 24px;margin-bottom:22px}
+  .impact-grid,
+  .merit-g{gap:10px;margin-bottom:18px}
+  .quick-targets{gap:10px;margin-bottom:18px}
+  .impact-card,
+  .merit-c{padding:12px 14px}
+  .ba-g{gap:10px;margin-bottom:14px}
+  .faq-g{gap:10px}
+  .pf{padding:11px 40px}
+
+  /* priority reading balance */
+  .direction-hero{
+    padding:24px 28px;
+    margin-bottom:14px;
+  }
+  .direction-title{
+    font-size:28px;
+    line-height:1.32;
+    margin-bottom:10px;
+  }
+  .direction-copy{
+    font-size:14.5px;
+    line-height:1.85;
+    max-width:760px;
+  }
+  .hero-catch{
+    font-size:15.5px;
+    padding:8px 13px;
+  }
+  .impact-grid,
+  .merit-g,
+  .quick-targets,
+  .sc-g,
+  .faq-g,
+  .bill-g{
+    gap:8px;
+    margin-bottom:12px;
+  }
+  .impact-card,
+  .merit-c,
+  .sc-c,
+  .faq-i,
+  .bill-c{
+    padding:10px 12px;
+  }
+  .sec{
+    margin-bottom:9px;
+  }
+  .quick-target{
+    padding:9px 11px;
+  }
+  .ba-g{
+    margin-bottom:10px;
+  }
+  .fs{
+    padding:11px 9px;
+  }
+  .notice,
+  .notes{
+    padding:9px 12px;
+    margin-bottom:12px;
+  }
+
+  @media screen and (max-width: 980px){
+    :root{--page-w:100%;--nav-h:auto}
+    body{padding-top:0;background:#fff;font-size:14px}
+    .topnav{position:sticky;height:auto;display:block;padding:8px 10px}
+    .nav-title{position:static;justify-content:center;border-right:0;margin:0 0 6px;padding:0;font-size:12px}
+    .nav-links{display:flex;gap:6px;overflow-x:auto;padding:0 0 2px;scrollbar-width:thin}
+    .nav-links a{font-size:12px;padding:7px 10px}
+    .page{width:100%;margin:0 0 16px;border-radius:0;box-shadow:none}
+    .ph{padding:22px 18px;display:block}
+    .hr{text-align:left;margin-top:12px}
+    .page-body{padding:22px 16px 26px}
+    .page-guide,.direction-hero,.solution-banner{display:block;padding:18px}
+    .page-guide-label{display:inline-block;margin-bottom:8px}
+    .page-guide-text{font-size:13px}
+    .direction-title{font-size:23px}
+    .direction-copy{font-size:14px}
+    .solution-price{margin-top:12px;text-align:left}
+    .impact-grid,.quick-targets,.tgt-g,.merit-g,.sc-g,.faq-g,.bill-g{grid-template-columns:1fr}
+    .ba-g{grid-template-columns:1fr;gap:8px}
+    .ba-ar{transform:rotate(90deg)}
+    .flow{display:block}
+    .fs{margin-bottom:8px}
+    .fa{justify-content:center;transform:rotate(90deg);margin:4px 0}
+    .pt,.ft{display:block;overflow-x:auto;white-space:nowrap}
+    .pf{padding:10px 16px;display:block}
+    .fs2{margin-top:4px}
+  }
+
   @media print{
+    @page{size:A4 landscape;margin:8mm}
     .topnav{display:none}
     body{background:#fff;padding-top:0}
-    .page{margin:0;box-shadow:none;border-radius:0}
+    .page{width:100%;min-height:190mm;margin:0;box-shadow:none;border-radius:0;page-break-after:always}
+    .page-body{padding:22px 30px 24px}
   }
 </style>
 </head>
@@ -208,15 +377,18 @@
     <div class="hr">
       <div class="brand">VOTEC</div>
       <div class="pnum">1 / 4</div>
-      <div class="ach">制作実績 100万枚以上！！</div>
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">G1限定バナー制作プランの概要と、契約後の制作進行を必要に応じて制作側へ相談できることが分かります。</div>
+    </div>
     <div class="direction-hero">
       <div class="direction-label">G1限定サービス｜制作進行サポート対応可能</div>
-      <div class="direction-title">契約後の制作進行は、<strong>制作側にお任せいただけます</strong></div>
+      <div class="direction-title">契約後の制作進行も、<strong>必要に応じて制作側へ相談できます</strong></div>
       <div class="direction-copy">
-        ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで、制作担当が店舗様とやり取りしながら進行します。
+        制作側で進行サポートを行う場合は、ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで制作担当が進行します。
       </div>
       <div class="hero-catch">営業担当者様は、提案・契約・店舗様との関係構築に集中しやすくなります</div>
     </div>
@@ -224,26 +396,18 @@
     <div class="impact-grid">
       <div class="impact-card">
         <div class="impact-label">POINT 01</div>
-        <div class="impact-title">進行負担を減らせる</div>
-        <div class="impact-text">ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで、原則制作側が主担当として進めます。</div>
+        <div class="impact-title">提案前の不安を減らせる</div>
+        <div class="impact-text">対象店舗、枚数、制作範囲が曖昧な場合も、事前に制作側へ確認できるため、営業担当者様だけで判断を抱え込みにくくなります。</div>
       </div>
       <div class="impact-card">
         <div class="impact-label">POINT 02</div>
-        <div class="impact-title">提案前に相談できる</div>
-        <div class="impact-text">対象店舗、制作枚数、依頼内容で迷う場合も、提案前に制作側へご相談いただけます。</div>
+        <div class="impact-title">受注後の進行を相談しやすい</div>
+        <div class="impact-text">依頼後の確認、制作進行、修正対応、納品まで、必要に応じて制作側でサポートできます。</div>
       </div>
       <div class="impact-card">
         <div class="impact-label">POINT 03</div>
-        <div class="impact-title">追加提案しやすい</div>
-        <div class="impact-text">G1HPご契約店舗様へ、月額オプションとして添えやすいプランです。</div>
-      </div>
-    </div>
-
-    <div class="sales-cta-strip">
-      <div class="sales-cta-label">営業担当者様へ</div>
-      <div>
-        <div class="sales-cta-main">G1HPご契約店舗様へ、提案しやすい月額オプションです。</div>
-        <div class="sales-cta-sub">対象店舗・制作枚数・依頼内容で迷う場合も、提案前に制作側へご相談いただけます。内容を一緒に整理したうえで、契約の最終判断は営業担当者様・店舗様にてお願いいたします。</div>
+        <div class="impact-title">月額オプションとして案内しやすい</div>
+        <div class="impact-text">G1HPご契約店舗様へ、掲載用バナー制作を追加提案しやすいプランです。</div>
       </div>
     </div>
 
@@ -260,15 +424,6 @@
       </div>
     </div>
 
-    <div class="sec">提案しやすい店舗様</div>
-    <div class="quick-targets">
-      <div class="quick-target">G1HPをご契約中・ご提案中の店舗様</div>
-      <div class="quick-target">毎月G1掲載用バナーを更新したい店舗様</div>
-      <div class="quick-target">月替わりのイベントや求人告知を打ち出したい店舗様</div>
-      <div class="quick-target">G1新規契約時に追加提案したい場合</div>
-      <div class="quick-target">既存G1店舗へ月額オプションを案内したい場合</div>
-      <div class="quick-target">契約後の制作進行の負担を抑えたい案件</div>
-    </div>
   </div>
   <div class="pf"><div class="fb">VOTEC</div><div class="fs2">G1限定バナー制作プラン｜IMC限定特別オプション</div></div>
 </div>
@@ -284,16 +439,19 @@
     <div class="hr">
       <div class="brand">VOTEC</div>
       <div class="pnum">2 / 4</div>
-      <div class="ach">制作実績 100万枚以上！！</div>
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">営業担当者様の受注後の負担がどこまで軽くなるか、これまでとの違いが分かります。</div>
+    </div>
     <div class="sec">営業にとっての具体的なメリット</div>
     <div class="merit-g">
       <div class="merit-c">
         <div class="merit-n">MERIT 01</div>
         <div class="merit-h">進行負担を減らせる</div>
-        <div class="merit-t">契約後の制作進行は制作側が主担当。営業担当者様だけで細かな進行を抱え込みにくくなります。</div>
+        <div class="merit-t">契約後の制作進行も必要に応じて制作側へ相談可能。営業担当者様だけで細かな進行を抱え込みにくくなります。</div>
       </div>
       <div class="merit-c">
         <div class="merit-n">MERIT 02</div>
@@ -305,13 +463,6 @@
         <div class="merit-h">追加提案しやすい</div>
         <div class="merit-t">G1HPご契約・ご提案中の店舗様へ、月額オプションとして添えやすいプランです。</div>
       </div>
-    </div>
-    <div class="sec">店舗様に伝えやすい価値</div>
-    <div class="value-g">
-      <div class="value-c"><div class="value-h">定額制</div><div class="value-t">月額オプションとして予算感を伝えやすい</div></div>
-      <div class="value-c"><div class="value-h">短納期</div><div class="value-t">管理画面からの依頼後、翌3営業日以内に納品</div></div>
-      <div class="value-c"><div class="value-h">依頼管理</div><div class="value-t">正式依頼を管理画面で確認できるため、月内枚数を把握しやすい</div></div>
-      <div class="value-c"><div class="value-h">修正無料</div><div class="value-t">1デザインにつき2回まで無料対応</div></div>
     </div>
     <div class="sec">これまでとこれから</div>
     <div class="ba-g">
@@ -327,7 +478,7 @@
       </div>
       <div class="ba-ar">▶</div>
       <div class="ba-c after">
-        <div class="ba-h">これから<span>制作進行は制作が主担当</span></div>
+        <div class="ba-h">これから<span>必要に応じて制作側がサポート</span></div>
         <ul class="ba-l">
           <li>G1掲載用バナーのヒアリング</li>
           <li>依頼内容・デザインの方向性を制作が整理</li>
@@ -337,13 +488,7 @@
         </ul>
       </div>
     </div>
-    <div class="ba-con">契約後の制作進行は制作側が主担当として進行します。営業担当者様には案件全体の状況をご確認いただきながら、必要に応じて店舗様へのフォローをお願いいたします。</div>
-    <div class="sec">案件化しやすい切り口</div>
-    <div class="sc-g">
-      <div class="sc-c"><div class="sc-h">新規ご契約時</div><div class="sc-b">G1HPと合わせて、掲載用バナー制作も月額で提案できます。</div></div>
-      <div class="sc-c"><div class="sc-h">既存G1店舗へのご案内時</div><div class="sc-b">毎月のG1掲載用バナー更新を、制作側の進行対応つき定額プランとして案内できます。</div></div>
-      <div class="sc-c"><div class="sc-h">繁忙期前のご案内時</div><div class="sc-b">季節イベントや月替わり告知のG1掲載用バナーを、継続提案につなげやすくなります。</div></div>
-    </div>
+    <div class="ba-con">契約後の制作進行は、必要に応じて制作側でサポートできます。営業担当者様には案件全体の状況をご確認いただきながら、必要に応じて店舗様へのフォローをお願いいたします。</div>
   </div>
   <div class="pf"><div class="fb">VOTEC</div><div class="fs2">G1限定バナー制作プラン｜IMC限定特別オプション</div></div>
 </div>
@@ -359,10 +504,13 @@
     <div class="hr">
       <div class="brand">VOTEC</div>
       <div class="pnum">3 / 4</div>
-      <div class="ach">制作実績 100万枚以上！！</div>
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">月額料金、制作枚数、1枚あたり単価、請求・契約のしくみが分かります。</div>
+    </div>
     <div class="sec">料金について</div>
     <table class="pt">
       <thead><tr><th class="tl">プラン名</th><th>制作枚数 / 月</th><th>月額料金（HP管理費別）</th><th>1枚あたりの単価</th></tr></thead>
@@ -395,17 +543,20 @@
     <div class="hl">
       <div class="badge">G1テンプレートHP限定｜営業担当者様向けご案内</div>
       <h1>ご利用フローと役割分担</h1>
-    <div class="sub">契約後の制作進行は制作が主担当。契約・請求・最終判断は営業担当者様と店舗様にてお願いいたします</div>
+    <div class="sub">契約後の制作進行は必要に応じて制作側でサポート可能。契約・請求・最終判断は営業担当者様と店舗様にてお願いいたします</div>
     </div>
     <div class="hr">
       <div class="brand">VOTEC</div>
       <div class="pnum">4 / 4</div>
-      <div class="ach">制作実績 100万枚以上！！</div>
     </div>
   </div>
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">管理画面からの依頼方法、依頼後の確認方法、役割分担、重要事項が分かります。</div>
+    </div>
     <div class="sec">ご利用フロー</div>
-    <div class="fnote">G1プランでは、依頼枚数を管理するため正式な制作依頼は管理画面からお願いいたします。店舗様・営業担当者様のどちらからご依頼いただいても構いません。事前相談や依頼後の確認・修正整理は、希望に応じてグループチャットまたはグループLINEでも進行できます。</div>
+    <div class="fnote">G1プランでは、月内の依頼枚数を管理するため、正式な制作依頼は管理画面からお願いいたします。店舗様・営業担当者様のどちらからご依頼いただいても構いません。</div>
     <div class="flow">
       <div class="fs"><div class="fn">STEP 01</div><div class="ft2">事前相談・見積</div><div class="fd">対象店舗・枚数・料金<br>制作範囲を確認</div></div>
       <div class="fa">▶</div>
@@ -417,7 +568,7 @@
     </div>
     <div class="notice">
       <strong>【制作進行サポートについて】</strong><br>
-      制作担当が制作窓口を担当し、制作内容のヒアリング、依頼内容の整理、制作進行、修正確認、納品までを主担当として進めます。事前相談や依頼後の確認・修正整理は、希望に応じてグループチャットまたはグループLINEでも対応可能です。月内の依頼枚数を正しく管理するため、正式な制作依頼は原則管理画面からお願いいたします。制作担当による電話対応は原則行っておりません。
+      制作側で進行サポートを行う場合は、制作担当が制作窓口となり、ヒアリング、依頼内容の整理、制作進行、修正確認、納品までを進めます。ご希望に応じて、グループチャットまたはグループLINEでの事前相談・依頼後の確認も可能です。制作担当による電話対応は原則行っておりません。
     </div>
     <div class="notice">
       <strong>【営業担当者様へのお願い】</strong><br>
