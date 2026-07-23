@@ -530,6 +530,50 @@
     color:#5c3147;
   }
 
+  /* compact page rhythm */
+  #page3 .page-body{
+    padding-top:30px;
+    padding-bottom:30px;
+  }
+  #page3 .pt{
+    margin-bottom:8px;
+  }
+  #page3 .notes{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4px 18px;
+    padding:9px 12px;
+    margin-bottom:10px;
+    line-height:1.55;
+  }
+  #page3 .notes li{
+    font-size:12.5px;
+    line-height:1.55;
+  }
+  #page3 .div{
+    margin:10px 0;
+  }
+  #page3 .sec{
+    margin-bottom:8px;
+  }
+  #page3 .bill-g{
+    gap:6px;
+  }
+  #page3 .bill-c{
+    padding:8px 9px;
+    border-radius:5px;
+    background:#fbf7f9;
+  }
+  #page3 .b-lbl{
+    font-size:11.5px;
+    margin-bottom:2px;
+    letter-spacing:.02em;
+  }
+  #page3 .b-val{
+    font-size:12.5px;
+    line-height:1.45;
+  }
+
   @media screen and (max-width: 980px){
     :root{--page-w:100%;--nav-h:auto}
     body{padding-top:0;background:#fff;font-size:14px}
@@ -554,6 +598,7 @@
     .pt,.ft{display:block;overflow-x:auto;white-space:nowrap}
     .pf{padding:10px 16px;display:block}
     .fs2{margin-top:4px}
+    #page3 .notes{grid-template-columns:1fr}
   }
 
   @media print{
